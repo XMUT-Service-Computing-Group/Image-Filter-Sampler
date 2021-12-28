@@ -23,6 +23,8 @@ def getimage():
 def blend():
     params = request.args.to_dict()
     count = int(params.get('count'))
+    if count < 10 or count > 100:
+        return 'count的范围是[10,100]'
     ft = int(count * 0.2) if int(count * 0.2) <= 7 else 7  # ft = fine-tune 表示微调的数量
     count = count - ft
     if count % 3 == 1:
