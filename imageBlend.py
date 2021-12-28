@@ -90,7 +90,6 @@ def getblend(count, r, g, b):
             Image.blend(image, imageFilter, 0.1).save(
                 'output/' + '(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')' + '.png')
             print('(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')', file=data)
-
             # print('(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')')
         i += 1
     data.close()
