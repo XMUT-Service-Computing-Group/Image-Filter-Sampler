@@ -78,7 +78,6 @@ def getblend(count, r, g, b):
                     2] + ')' + '.png')
             print('(' + ft[i - 1].split(',')[0] + ',' + ft[i - 1].split(',')[1] + ',' + ft[i - 1].split(',')[
                 2] + ')', file=data)
-            # print('(' + ft[i - 1].split(',')[0] + ',' + ft[i - 1].split(',')[1] + ',' + ft[i - 1].split(',')[2] + ')')
         else:
             if isR:
                 r = getrandom(count)
@@ -90,7 +89,6 @@ def getblend(count, r, g, b):
             Image.blend(image, imageFilter, 0.1).save(
                 'output/' + '(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')' + '.png')
             print('(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')', file=data)
-            # print('(' + str(r * i) + ',' + str(g * i) + ',' + str(b * i) + ')')
         i += 1
     data.close()
     return "ok"
